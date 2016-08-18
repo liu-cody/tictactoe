@@ -19,7 +19,7 @@ private:
     
     bool checkrows() {
         for (int row = 0; row < 3; ++row) {
-            int currentsquare = row + 3 * row;
+            int currentsquare = 3 * row;
             if (board[currentsquare] == board[currentsquare + 1] &&
                 board[currentsquare] == board[currentsquare + 2] &&
                 (board[currentsquare] == 'o' ||
@@ -57,8 +57,8 @@ public:
     
     //input constructor
     Game(char input) {
-        if (input == 'x') {
-            Player1 = input;
+        if (input == 'x' || 'X') {
+            Player1 = 'x';
             Player2 = 'o';
         }
         else {
@@ -131,8 +131,7 @@ Game initializegame(char input) {
     std::cout << "Press 'X' if you would like to play as 'X' or 'O' if you would like to play as 'O'.\n";
     char XorO;
     while (std::cin >> XorO) {
-        std::tolower(XorO);
-        if (XorO != 'x' && XorO != 'o') {
+        if (std::tolower(XorO) != 111 && std::tolower(XorO) != 120) {
             std::cout << "Invalid input. Please try again\n";
         }
         else {
