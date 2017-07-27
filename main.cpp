@@ -1,6 +1,5 @@
 //
-//  chapter8.cpp
-//  projecteuler
+//  TicTacToe
 //
 //  Created by Cody Liu on 8/12/16.
 //  Copyright © 2016 Cody Liu. All rights reserved.
